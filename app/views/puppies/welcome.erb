@@ -1,0 +1,12 @@
+<h1> WELCOME to the PUPPY APP </h1>
+
+<a href="puppies/new">Create a new puppy</a>
+
+<br>
+
+<label>Puppies:</label>
+<ul>
+    <% Puppy.all.each do |puppy| %>
+        <li><a href="/puppies/<%= puppy.id %>"><%= puppy.name %></a></li>
+    <% end %>
+</ul>
